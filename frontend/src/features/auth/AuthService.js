@@ -1,7 +1,7 @@
 // src/services/authService.js
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000/api/auth';
+const API_URL = process.env.REACT_APP_API_URL || 'truegradient-assigment-gq6u.vercel.app';
 
 export const signup = async (username, password) => {
   const res = await axios.post(`${API_URL}/signup`, { username, email, password });
@@ -18,3 +18,4 @@ export const getToken = () => localStorage.getItem('token');
 export const setToken = (token) => localStorage.setItem('token', token);
 
 export const logout = () => localStorage.removeItem('token');
+
